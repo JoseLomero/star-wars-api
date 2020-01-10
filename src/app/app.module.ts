@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule, routes } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, PreloadAllModules } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -11,6 +11,7 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
   ],
   providers: [],
