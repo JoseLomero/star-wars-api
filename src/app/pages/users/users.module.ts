@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { UserRoutingModule } from './user-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RegisterComponent,
   ],
   imports: [
+    FormsModule,
     CommonModule,
     UserRoutingModule,
     NgbModule,
