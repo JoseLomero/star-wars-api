@@ -1,3 +1,19 @@
 <div class="container">
-    <router-outlet></router-outlet>
+  <a
+    routerLink="/"
+    routerLinkActive="btn-primary"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="btn btn-lg"
+    role="button"
+    aria-pressed="true"
+  >Register</a>
+  <a
+    routerLink="/films"
+    routerLinkActive="btn-primary"
+    class="btn btn-lg"
+    role="button"
+    aria-pressed="true"
+  >Films</a>
+
+  <router-outlet></router-outlet>
 </div>
