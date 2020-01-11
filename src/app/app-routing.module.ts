@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { FilmsGuard } from './pages/films/films.guard';
 
 
 export const routes: Routes = [
@@ -9,7 +10,8 @@ export const routes: Routes = [
   },
   {
     path: 'films',
-    loadChildren: () => import('./pages/films/films.module').then(m => m.FilmsModule)
+    loadChildren: () => import('./pages/films/films.module').then(m => m.FilmsModule),
+    canActivate: [ FilmsGuard ],
   },
 ];
 
