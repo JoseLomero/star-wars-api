@@ -9,10 +9,10 @@ const routes: Routes = [
     component: ListComponent,
     pathMatch: 'full',
   },
-  {
-    path: 'details/:id',
-    component: DetailsComponent,
-  },
+  // {
+  //   path: 'details/:id',
+  //   component: DetailsComponent,
+  // },
 ];
 
 @NgModule({

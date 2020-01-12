@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FilmsService } from '../films.service';
+import { ActivatedRoute } from '@angular/router';
+import { map, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() filmDetails: any;
+
+  constructor(
+    // private route: ActivatedRoute,
+    // private filmsService: FilmsService,
+  ) { }
 
   ngOnInit() {
+    // this.route.params
+    // .pipe(
+    //   map(params => {
+    //     return params.id;
+    //   }),
+    //   switchMap(id => this.filmsService.getFilmDetails(id)),
+    // )
+    // .subscribe(filmDetails => {
+    //   this.filmDetails = filmDetails;
+    // });
   }
 
 }

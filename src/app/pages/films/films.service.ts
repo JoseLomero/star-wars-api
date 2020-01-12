@@ -21,4 +21,8 @@ export class FilmsService {
       );
   }
 
+  getFilmDetails(episode: number): Observable<any> {
+    return this.http.get<any>(`${this.filmList}${episode}/`);
+  }
+
 }

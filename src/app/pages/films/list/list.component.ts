@@ -9,6 +9,7 @@ import { FilmsService } from '../films.service';
 export class ListComponent implements OnInit {
 
   filmList: any[];
+  filmDetails: any;
 
   constructor(
     private filmsService: FilmsService,

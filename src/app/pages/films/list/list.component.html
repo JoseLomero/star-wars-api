@@ -1,9 +1,14 @@
 <div>
   <ul *ngIf="filmList?.length">
     <li *ngFor="let film of filmList">
-      <a [routerLink]="['details', film.episode_id]">
+      <a (click)="filmDetails=film">
         {{ film.episode_id }} {{ film.title }}
       </a>
     </li>
   </ul>
 </div>
+
+
+<app-details *ngIf="filmDetails"
+  [filmDetails]="filmDetails"
+></app-details>

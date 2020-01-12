@@ -1,1 +1,8 @@
-<p>details works!</p>
+<div>
+  <p>Episode: {{ filmDetails.episode_id }}</p>
+  <p>Title: {{ filmDetails.title }}</p>
+  <p>Director: {{ filmDetails.director }}</p>
+  <p>Producer: {{ filmDetails.producer }}</p>
+  <p>Release Date: {{ filmDetails.release_date | date:'dd/MM/yyyy' }}</p>
+  <p>Opening Crawl: </p><pre>{{ filmDetails.opening_crawl }}</pre>
+</div>
