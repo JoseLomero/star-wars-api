@@ -1,1 +1,9 @@
-<p>list works!</p>
+<div>
+  <ul *ngIf="filmList?.length">
+    <li *ngFor="let film of filmList">
+      <a [routerLink]="['details', film.episode_id]">
+        {{ film.episode_id }} {{ film.title }}
+      </a>
+    </li>
+  </ul>
+</div>

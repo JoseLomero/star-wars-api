@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmsService } from '../films.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  filmList: any[];
+
+  constructor(
+    private filmsService: FilmsService,
+  ) { }
 
   ngOnInit() {
+    this.filmsService.getFilms()
+      .subscribe(results => {
+        this.filmList = results;
+      });
   }
 
 }
